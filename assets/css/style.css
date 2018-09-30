@@ -1,0 +1,59 @@
+.navbar  {
+
+  font-family: 'Georgia', Times, Times New Roman, serif;
+    background-color: #ffffff;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width:1px;
+}
+
+.header-left {
+    color: #ffffff;
+    font-size: 50px;
+    padding-left: 180px;
+    display: inline;
+}
+
+.header-right {
+    color: #cccccc;
+}
+
+.container {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    
+}
+
+body{
+    background-image: url("full-bloom.png");
+}
+
+.About-ME {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: #4aaaa5;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.navbar-header {
+  background-color: #4aaaa5;  
+  font-size: 50px;
+  display: inline;
+}
+
+.well {
+    background-color: #ffffff;
+}
+
+.footer {
+    Position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color: #666666;
+    color:white;
+    text-align:center;
+    border-top-color: #4aaaa5;
+    border-top-style:solid;
+    border-top:10px;
+}
