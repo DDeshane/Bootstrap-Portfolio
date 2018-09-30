@@ -37,12 +37,42 @@ body{
 
 .navbar-header {
   background-color: #4aaaa5;  
-  font-size: 50px;
+  font-size: 25px;
   display: inline;
+  color: #ffffff;
+}
+
+.navbar-header a {
+    color: #ffffff;
 }
 
 .well {
     background-color: #ffffff;
+}
+
+.first-text {
+    bottom: 447px;
+    left: 40px;    
+}
+
+.about-image {
+    max-width: 200px;
+}
+
+.second-text {
+    bottom: 447px;
+    left: 274px; 
+}
+.third-text {
+    left: 40px; 
+}
+.fourth-text {
+    bottom: 253px;
+    left: 274px;
+}
+.fifth-text {
+    bottom:60px;
+    left:40px;
 }
 
 .footer {
@@ -56,4 +86,26 @@ body{
     border-top-color: #4aaaa5;
     border-top-style:solid;
     border-top:10px;
+}
+
+.image-text {
+    position: absolute;
+    background-color: #4aaaa5;
+    width: 200px;
+    color: #ffffff;
+    text-align: center;
+    height: 30px;
+    vertical-align: middle;
+    top: 62%;
+    width: 85%;
+}
+
+.image-box {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.image-box-right {
+    clear: right;
 }
