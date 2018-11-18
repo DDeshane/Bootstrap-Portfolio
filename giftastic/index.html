@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Disney Princesses</title>
+</head>
+
+<header>
+    <h1>Disney Princess Gifstastic
+        </h1>
+</header>
+
+<body>
+    <div class="button">
+        <button class="princess" data-princess="Princess Ariel">Ariel</button>
+        <button class="princess" data-princess="Princess Elsa">Elsa</button>
+        <button class="princess" data-princess="Princess Anna">Anna</button>
+        <button class="princess" data-princess="Princess Belle">Belle</button>
+        <button class="princess" data-princess="Princess Jasmine">Jasmine</button>
+        <button class="princess" data-princess="Princess Tiana">Tiana</button>
+        <button class="princess" data-princess="Princess Moana">Moana</button>
+        <button class="princess" data-princess="Princess Cinderella">Cinderella</button>
+        <button class="princess" data-princess="Princess Snow White">Snow White</button>
+        <button class="princess" data-princess="Princess Sleeping Beauty">Sleeping Beauty</button>
+    </div>
+    <div class = "addButton">
+    <h3>Add a Princess</h3>
+    <input id="addPrincess" type="text" name="Add a Princess" value="">
+    <button class="addedPrincess">Submit</button>
+    </div>
+    <div id="gifs-appear-here">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("button.addedPrincess").on("click", function () {
+            var princess = $('#addPrincess').val();
+            var princessButton = $("<button>");
+            princessButton.attr("class", "princess");
+            princessButton.attr("data-princess", "Princess " + princess);
+            princessButton.html(princess);
+            princessButton.on('click',function(){
+                var princess=$(this).attr('data-princess');
+                getgif(princess);
+            })
+            $(".button").append(princessButton)
+
+        });
+
+        $("button.princess").on("click", function () {
+            var princess = $(this).attr("data-princess");
+
+            getgif(princess);
+
+        });
+
+        function getgif(princess) {
+            $("#gifs-appear-here").empty();
+
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                princess + "&api_key=kb2sm9seNn36bFLQc73jrdstJU913a3P&limit=10";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET",
+                success: function (response) {
+
+                    var results = response.data;
+
+                    for (var i = 0; i < results.length; i++) {
+
+                        var princessDiv = $("<div>");
+
+                        var p = $("<p>").text("Rating: " + results[i].rating);
+
+                        var princessImage = $("<img>");
+
+                        princessImage.attr("src", results[i].images.fixed_height_still.url);
+                        princessImage.attr('data-animate', results[i].images.fixed_height.url);
+                        princessImage.attr('data-still', results[i].images.fixed_height_still.url);
+                        princessImage.attr('data-state', 'still');
+                        princessImage.on('click', function (e) {
+                            var image = $(e.currentTarget);
+                            if (image.attr('data-state') === 'still') {
+                                image.attr('src', image.attr('data-animate'));
+                                image.attr('data-state', 'animated');
+                            }
+                            else {
+                                image.attr('src', image.attr('data-still'));
+                                image.attr('data-state', 'still');
+                            }
+                        });
+
+                        princessDiv.append(p);
+                        princessDiv.append(princessImage);
+
+                        $("#gifs-appear-here").prepend(princessDiv);
+                    }
+                }
+            });
+
+        }
+    </script>
+</body>
+
+</html>

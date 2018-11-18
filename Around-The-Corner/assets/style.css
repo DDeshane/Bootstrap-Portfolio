@@ -1,0 +1,123 @@
+#btnClose {
+	width:100%;
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #BCBCBC;
+}
+
+.delayedPopupWindow {
+	display: none;
+	position: fixed;
+	width: auto;
+	max-width: 480px;
+	height: 310px;
+	top: 50%;
+	left: 50%;
+	margin-left: -260px;
+	margin-top: -180px;
+	background-color: #efefef;
+	border: 2px solid #333;
+	z-index: 102;
+	padding: 10px 20px;
+}
+
+#videoinstructions {
+	border: 4px solid blue;
+}
+
+.polymorph {
+	/* fill:rgb(214, 48, 56); */
+	fill: #6471a8;
+    padding: 10px 20px;
+    margin-left: -260px;
+    margin-top: -180px;
+    /* position:absolute; */
+    z-index: -1;
+   }
+   
+   .testbox {
+       margin: auto;
+       width: 700px;
+       z-index: -1;
+   }
+
+#reveal {
+   position: absolute;
+   margin: 10em auto 0 auto;
+   left: 0;
+   right: 0; 
+   width: 30%;
+   background: none;
+   border: 1px solid white;
+   border-radius: 5px;
+   padding: 15px; 
+   color: white;
+   font-size: 1.5em;
+   outline: 0;
+}
+
+#rtext {
+   position: absolute;
+   text-align: center;
+   text-indent: 30px;
+   /* color: rgb(214, 48, 56); */
+   color: #6471a8;
+   margin-left: 200px;
+}
+
+
+/* footer {
+	position: fixed;
+    left: 0;
+	bottom: 0;
+	height: 20px;
+    width: 100%;
+    background-color: gray;
+    color: gray;
+    text-align: center;
+} */
+ #footerbtn {
+	position: absolute;;
+	margin-left: 250px;
+	margin-right: 250px;
+	color: blue;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+ }
+
+
+.container {
+	background: white;
+	width: 50%;
+	padding: 10px;
+	margin-top: 40px;
+	
+}
+
+.jumbotron {
+	background-color: white;
+	height: 200px;
+	background: none;
+	
+	
+}
+
+#h4 {
+	text-align: center;
+}
+
+
+
+.mealImage {
+    display: inline-block;
+   
+}
+
+.spicy-rice {
+	font-family: 'Spicy Rice', cursive;
+	font-size-adjust: 100 px;
+}
+
+

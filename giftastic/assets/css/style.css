@@ -1,0 +1,21 @@
+button{
+    background-color: rgb(218, 49, 77);
+    color:white;
+    font-size: 16px;
+    padding: 14px 40px;
+    border-radius: 8px;
+}
+
+.addButton{
+    text-align: center;
+    font-family: cursive;
+}
+
+body{
+    background-color: lightpink;
+}
+
+header{
+    font-family: cursive;
+    text-align: center;
+}

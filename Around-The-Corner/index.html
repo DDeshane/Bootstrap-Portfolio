@@ -1,0 +1,142 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Around-The-Corner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/project1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+
+
+</head>
+
+
+
+<body background="assets/Background1.jpg">
+
+    <div class="container">
+       <div style="background: none !important" class="jumbotron">  
+        <div class="float-left"><img src="assets/images/DJicon.svg" height=100 width=100></div>
+        <div class="float-left"><p style="font-size: 80px !important" class="spicy-rice">DJ Chef</p></div>
+           </div>
+
+        
+   
+   
+    <!-- <div class="container1"> -->
+    <div class="testbox">
+        <div>
+            <button id="reveal">Click for Directions</button>
+        </div>
+        <div id="rtext">
+            <!-- <h1> DJ Chef</h1> -->
+            <p>Become a master chef and DJ in minutes!</p>
+            <p>Click the dish culture to reveal directions</p>
+            <p>Then scroll below for some great music for cooking!</p>
+        </div>
+
+        <svg viewBox="0 10 215 110">
+            <polygon class="polymorph" points="285, 110 0, 110 0, 0 47.7, 0 285,0  " />
+
+        </svg>
+    </div>
+
+    <script src="./assets/anime.min.js"></script>
+
+    <script>
+
+        var reveal = document.getElementById("reveal");
+
+        reveal.onclick = function () {
+            var morphing = anime({
+                targets: ' .polymorph',
+                points: [
+                    { value: '215, 110 0, 110 0, 0 47.7, 0 67,76 ' },
+                ],
+                easing: 'easeOutQuad',
+                duration: 4500,
+                loop: false
+            });
+
+
+
+        }
+
+    </script>
+   
+
+    <div class="container">
+
+        <!-- Delayed Pop up window -->
+        <div id="delayedPopup" class="delayedPopupWindow">
+            <a href="#" id="btnClose" title="Click here to close">[X]</a>
+            <div class="popupDescription">
+                <h2>Want a weekly bonus recipe?</h2>
+                <p>Sign up for our recipe alert and get unique recipes emailed weekly!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="emailInput">Email Address</label>
+                        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                            placeholder="Enter Email Address">
+                        <button type="submit" class="btn btn-primary" id="submitEmail">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                
+                <h4>What are you hungry for today?</h4>
+                <br>
+               
+                <button type="button" class="btn btn-success area-button" data-area="american">American Dishes</button>
+                <button type="button" class="btn btn-success area-button" data-area="italian">Italian Dishes</button>
+                <button type="button" class="btn btn-success area-button" data-area="chinese">Chinese Dishes</button>
+                <button type="button" class="btn btn-success area-button" data-area="jamaican">Jamaican</button>
+                <button type="button" class="btn btn-success area-button" data-area="mexican">Mexican</button>
+            </div>
+        </div>
+        <br>
+        <h2 class="spicy-rice">Recipes</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-12" id="meal-list">
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <h2 class="spicy-rice">Playlist</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="music_table">
+                <tr>
+                    <th>Artist</th>
+                    <th class="albumArt">Cover Image</th>
+                    <th>Song Name</th>
+                    <th>URL</th>
+                    
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <button id="footerbtn">
+                Click to Reset
+            </button>
+        </footer>
+    </div>
+</body>
+</div>
+
+
+</html>
