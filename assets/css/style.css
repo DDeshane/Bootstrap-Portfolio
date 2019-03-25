@@ -91,13 +91,13 @@ body{
 .image-text {
     position: absolute;
     background-color: #4aaaa5;
-    width: 200px;
+    width: 100px;
     color: #ffffff;
     text-align: center;
-    height: 40px;
+    height: 30px;
     vertical-align: middle;
     top: 62%;
-    width: 77%;
+    width: 73.5%;
 }
 
 .image-box {
